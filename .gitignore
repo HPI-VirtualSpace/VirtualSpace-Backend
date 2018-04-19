@@ -1,0 +1,14 @@
+Build
+bin
+obj
+packages
+*.stackdump
+.vs
+/.vs
+*.lock.json
+*.lock
+TestResults
+
+*.dgml
+
+PerformanceReports/

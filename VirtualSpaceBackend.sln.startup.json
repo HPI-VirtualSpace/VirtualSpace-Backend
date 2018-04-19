@@ -1,0 +1,60 @@
+/*
+    This is a configuration file for the SwitchStartupProject Visual Studio Extension
+    See https://bitbucket.org/thirteen/switchstartupproject/src/tip/Configuration.md
+*/
+{
+  /*  Configuration File Version  */
+  "Version": 3,
+
+  /*  Create an item in the dropdown list for each project in the solution?  */
+  "ListAllProjects": false,
+
+  /*  Dictionary of named configurations with one or multiple startup projects
+      and optional parameters like command line arguments and working directory. */
+	"MultiProjectConfigurations": {
+		"BackendSimulation":  {
+			"Projects": {
+				"BackendSimulation": {} 
+			} 
+		},
+		"Backend+Frontend+Bots": {
+			"Projects": {
+				"Backend": {},
+				"Bots": {},
+				"Frontend": {}
+			}
+		},
+		"Backend+Bots": {
+			"Projects": {
+				"Backend": {},
+				"Bots": {}
+			}
+		},
+		"Backend+Frontend": {
+			"Projects": {
+				"Backend": {},
+				"Frontend": {}
+			}
+		},
+		"Backend": {
+			"Projects": {
+				"Backend": {}
+			}
+		},
+		"Bots": {
+			"Projects": {
+				"Bots": {}
+			}
+		},
+    "Frontend": {
+      "Projects": {
+        "Frontend": {}
+      }
+    },
+    "StudyAnalysis": {
+      "Projects": {
+        "StudyAnalysis": {}
+      }
+    }
+	}
+}

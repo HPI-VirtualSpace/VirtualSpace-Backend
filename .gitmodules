@@ -1,0 +1,3 @@
+[submodule "Shared/Src"]
+	path = Shared/Src
+	url = git@bitbucket.org:hpihci/virtualspace-shared.git

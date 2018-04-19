@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E218301F-E729-4FC5-A6C7-DEB3F7547CA5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>VirtualSpace.Backend</RootNamespace>
+    <AssemblyName>Backend</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug NoVis|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug NoVis\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>backend.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gurobi75.NET, Version=7.5.0.0, Culture=neutral, PublicKeyToken=21e2c4b1860157bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\gurobi752\win64\bin\Gurobi75.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteNetLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\externalpackages\LiteNetLib\LiteNetLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MIConvexHull.NET Standard, Version=1.0.17.411, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIConvexHull.1.1.17.0411\lib\netstandard1.0\MIConvexHull.NET Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.3.0\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.0.1\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Primitives.4.3.0\lib\net46\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\BackendWorker\FrontendHandling.cs" />
+    <Compile Include="Src\BackendWorker\MetricLogger.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Ticks\TickManager.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\TimeMatching\ConditionSolver.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\TimeMatching\BucketTimeMatcher.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\TimeMatching\MaximumOfFirstTimeTaker.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\TimeMatching\TimeMatcher.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\TimeMatching\VoteTimeBucket.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Voting\AverageFairness.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Voting\Choreography.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Voting\MaximumAverageVotingMechanism.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Voting\MaximumShiftingDictatorMechanism.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Voting\VotingMechanism.cs" />
+    <Compile Include="Src\Utility\History.cs" />
+    <Compile Include="Src\BackendWorker\Networking.cs" />
+    <Compile Include="Src\Space\PlayfieldArranger.cs" />
+    <Compile Include="Src\BackendWorker\SyncPlayers.cs" />
+    <Compile Include="Src\Space\ManagedAllocationIntersection.cs" />
+    <Compile Include="Src\BackendWorker\DataHandling.cs" />
+    <Compile Include="Src\Storage\IPlayerData.cs" />
+    <Compile Include="Src\Utility\AreaSplitter\Voronoi\WeightedVoronoi.cs" />
+    <Compile Include="Src\Utility\AreaSplitter\Voronoi\MIVector.cs" />
+    <Compile Include="Src\Utility\AreaSplitter\IAreaSplitter.cs" />
+    <Compile Include="Src\Utility\AreaSplitter\Voronoi\Voronoi.cs" />
+    <Compile Include="Src\Utility\AreaSplitter\Voronoi\VoronoiCell.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\Voting\AssignedVote.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\StateStrategy.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\StateTransition.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategies\StateHandler\SystemState.cs" />
+    <Compile Include="Src\Strategies\ConflictStrategy.cs" />
+    <Compile Include="Src\Utility\BackendConfig.cs" />
+    <Compile Include="Src\Utility\Extrapolator.cs" />
+    <Compile Include="Src\Storage\EventBundler.cs" />
+    <Compile Include="Src\Storage\PlayerData.cs" />
+    <Compile Include="Src\Storage\PlayerIDManager.cs" />
+    <Compile Include="Src\BackendWorker\EventSetup.cs" />
+    <Compile Include="Src\BackendWorker\PlayerManagement.cs" />
+    <Compile Include="Src\BackendWorker\StaticFunctions.cs" />
+    <Compile Include="Src\BackendWorker\BackendWorker.cs" />
+    <Compile Include="Src\Utility\Time.cs" />
+    <Compile Include="Src\Main\Main.cs" />
+    <Compile Include="Src\Storage\PlayerDataEntry.cs" />
+    <Compile Include="Src\Strategies\StrategyManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{1b8169ea-78e2-4d28-a751-dca426d1395e}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="backend.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MIConvexHull.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)Resources" /s /i /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
